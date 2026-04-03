@@ -3,74 +3,86 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MultiCraft Wiki</title>
-<style>
-  body { font-family: Arial; background:#1b1b1b; color:#ddd; margin:0; }
-  header { background:#2a2a2a; padding:20px; text-align:center; }
-  header h1 { color:#58a6ff; margin:0; }
-  nav { margin-top:10px; }
-  nav a { color:#58a6ff; margin:0 15px; text-decoration:none; }
-  nav a:hover { text-decoration:underline; }
-  section { max-width:900px; margin:20px auto; padding:20px; background:#2c2c2c; border-radius:8px; }
-  h2 { color:#58a6ff; }
-  footer { text-align:center; padding:20px; color:#888; }
-  .search { width:100%; max-width:400px; padding:10px; margin:10px auto; display:block; border-radius:5px; border:none; }
-</style>
+<title>MultiCraft Wiki by MEWIOUS</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <header>
-  <h1>MultiCraft Wiki</h1>
+  <h1>MultiCraft Wiki by MEWIOUS</h1>
   <nav>
-    <a href="#blocks">Blocks & Items</a>
+    <a href="#about">About</a>
     <a href="#commands">Commands</a>
-    <a href="#mods">Mods</a>
-    <a href="#skins">Skins</a>
-    <a href="#servers">Servers</a>
+    <a href="#blocks">Blocks & Items</a>
+    <a href="#gamemodes">Game Modes</a>
+    <a href="#tips">Tips</a>
   </nav>
 </header>
 
-<input type="text" id="search" class="search" placeholder="Search... (block, command, mod)">
+<input type="text" id="search" class="search" placeholder="Search commands, blocks, etc...">
 
-<section id="blocks">
-  <h2>Blocks & Items</h2>
-  <p>All MultiCraft blocks with textures, uses, and crafting recipes.</p>
-</section>
+<div class="container">
 
-<section id="commands">
-  <h2>Commands</h2>
-  <p>Learn all MultiCraft commands and how to use them.</p>
-</section>
+  <section id="about" class="fade-section">
+    <h2>About MultiCraft</h2>
+    <p>MultiCraft — Build and Mine! is a sandbox voxel game with Survival and Creative modes. Multiplayer allows you to explore and build with friends.</p>
+  </section>
 
-<section id="mods">
-  <h2>Mods</h2>
-  <p>Guide to MultiCraft mods, what they do, and how to install them.</p>
-</section>
+  <section id="commands" class="fade-section">
+    <h2>Built-In Commands</h2>
+    <div class="commands-list">
+      <button class="command-btn">/admin</button>
+      <button class="command-btn">/ban &lt;name&gt; &lt;reason&gt;</button>
+      <button class="command-btn">/clearinv &lt;name&gt;</button>
+      <button class="command-btn">/give &lt;name&gt; &lt;item&gt; &lt;count&gt;</button>
+      <button class="command-btn">/spawn</button>
+      <button class="command-btn">/teleport &lt;player&gt;</button>
+      <button class="command-btn">/kick &lt;name&gt; &lt;reason&gt;</button>
+      <button class="command-btn">/me &lt;action&gt;</button>
+      <button class="command-btn">/time &lt;value&gt;</button>
+      <button class="command-btn">/status</button>
+      <button class="command-btn">/help</button>
+    </div>
+  </section>
 
-<section id="skins">
-  <h2>Skins & Customization</h2>
-  <p>How to change your character’s skin and customize textures.</p>
-</section>
+  <section id="blocks" class="fade-section">
+    <h2>Blocks & Items</h2>
+    <div class="blocks-list">
+      <div class="block-item">
+        <img src="textures/stone.png" alt="Stone">
+        <p>Stone – Basic block used for building or crafting.</p>
+      </div>
+      <div class="block-item">
+        <img src="textures/dirt.png" alt="Dirt">
+        <p>Dirt – Common block for landscaping.</p>
+      </div>
+    </div>
+  </section>
 
-<section id="servers">
-  <h2>Servers & Multiplayer Tips</h2>
-  <p>Hosting tips, joining servers, and staying safe in multiplayer worlds.</p>
-</section>
+  <section id="gamemodes" class="fade-section">
+    <h2>Game Modes</h2>
+    <ul>
+      <li><strong>Survival:</strong> Gather resources, avoid mobs, manage hunger.</li>
+      <li><strong>Creative:</strong> Unlimited blocks/items, fly freely.</li>
+    </ul>
+  </section>
+
+  <section id="tips" class="fade-section">
+    <h2>Tips</h2>
+    <ul>
+      <li>Use /give for building quickly.</li>
+      <li>Check server rules before joining.</li>
+      <li>Back up your worlds regularly.</li>
+      <li>Manage privileges carefully.</li>
+    </ul>
+  </section>
+
+</div>
 
 <footer>
-  &copy; 2026 Your Name | MultiCraft Wiki
+  &copy; 2026 MEWIOUS | MultiCraft Wiki
 </footer>
 
-<script>
-// Simple search filter for sections
-const searchInput = document.getElementById('search');
-searchInput.addEventListener('input', () => {
-  const query = searchInput.value.toLowerCase();
-  document.querySelectorAll('section').forEach(sec => {
-    sec.style.display = sec.textContent.toLowerCase().includes(query) ? 'block' : 'none';
-  });
-});
-</script>
-
+<script src="js/script.js"></script>
 </body>
 </html>
